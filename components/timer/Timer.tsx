@@ -16,18 +16,15 @@ export const Timer = () => {
         {amount.map((timerID) => (
           <TimerItem key={timerID} id={timerID} />
         ))}
-        <ControlButton
-          type="ghost"
-          css={{
-            width: 32,
-            ml: '50%',
-            transform: 'translateX(-50%)',
-            transformOrigin: '-450% 50%',
-          }}
-          onClick={() => addTimer(amount[amount.length - 1] + 1)}
-        >
-          <AddIcon />
-        </ControlButton>
+        <ButtonWrap>
+          <ControlButton
+            type="ghost"
+            css={{ width: 32 }}
+            onClick={() => addTimer(amount[amount.length - 1] + 1)}
+          >
+            <AddIcon />
+          </ControlButton>
+        </ButtonWrap>
       </TimerWrap>
     </>
   );
@@ -37,4 +34,10 @@ const TimerWrap = styled('div', {
   maxWidth: 420,
   mx: 'auto',
   width: '100%',
+});
+
+const ButtonWrap = styled('div', {
+  boxSizing: 'border-box',
+  display: 'grid',
+  placeItems: 'center',
 });

@@ -84,8 +84,12 @@ export const PillButton = styled(BaseButton, {
   borderRadius: 4,
   display: 'gird',
   placeItems: 'center',
+
   '& svg': {
     verticalAlign: 'center',
+  },
+  '@phone': {
+    px: 8,
   },
 
   transition: 'all 200ms ease-out',
