@@ -19,7 +19,7 @@ export const Timer = () => {
         <ButtonWrap>
           <ControlButton
             type="ghost"
-            css={{ width: 32 }}
+            css={{ width: 32, height: 32 }}
             onClick={() => addTimer(amount[amount.length - 1] + 1)}
           >
             <AddIcon />
